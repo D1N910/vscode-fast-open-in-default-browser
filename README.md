@@ -1,6 +1,5 @@
-#Fast Open HTML in Default Browser
-
-## Features
+# Fast Open HTML in Default Browser
+##Features
 - Open HTML file with default browser
 - In the explorer, right-click on the HTML file to open the `Open in default browser`
 - In the editor, right-click on the HTML file `Open in default browser`
