@@ -1,4 +1,5 @@
-## 0.0.1: 2017/03/30
-- 用默认浏览器打开 HTML 文件
-- 在资源管理器中，HTML 文件右键显示 `在浏览器中打开` 菜单
-- 在编辑器中，HTML 文件右键显示 `在浏览器中打开` 菜单
+## 0.0.4: 2018/06/24
+- Open HTML file with default browser
+- In the explorer, right-click on the HTML file to open the `Open in default browser`
+- In the editor, right-click on the HTML file `Open in default browser`
+- Use keybindings `ctrl+1`[windows] or `cmd+1`[mac] to open html file more faster

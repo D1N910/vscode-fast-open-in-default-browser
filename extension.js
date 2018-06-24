@@ -3,10 +3,16 @@ var opn = require('opn');
 
 function activate(context) {
 
-    var disposable = vscode.commands.registerCommand('peakchen90.openInBrowser', function (e) {
-        var filename = e._fsPath;
+    var disposable = vscode.commands.registerCommand('D1n910.openInBrowser', function (e) {
+        // Determine whether shortcuts open files or run contexts to open files
+        if(!e){
+            //Return the address of the file currently being edited
+            var filename=vscode.window.activeTextEditor.document.uri.fsPath;
+        }else{
+            var filename = e._fsPath;
+        }
         if (!/\.html?$/i.test(filename)) {
-            vscode.window.showWarningMessage('不能打开非HTML或HTM格式的文件');
+            vscode.window.showWarningMessage('Cannot open non-HTML or HTM formatted files');
             return;
         }
         opn(filename);

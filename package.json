@@ -1,15 +1,15 @@
 {
-    "name": "open-html-in-browser",
-    "displayName": "Open HTML in Default Browser",
-    "description": "Open HTML in Default Browser",
-    "version": "0.0.3",
-    "publisher": "peakchen90",
+    "name": "fast-open-html-in-browser",
+    "displayName": "Fast Open HTML in Default Browser",
+    "description": "Can Use Keybindings Open HTML in Default Browser",
+    "version": "0.0.4",
+    "publisher": "d1n910",
     "repository": {
         "type": "git",
-        "url": "https://github.com/peakchen90/vscode-open-in-default-browser.git"
+        "url": "https://github.com/d1n910/vscode-open-in-default-browser.git"
     },
     "bugs": {
-        "url": "https://github.com/peakchen90/vscode-open-in-default-browser/issues"
+        "url": "https://github.com/d1n910/vscode-open-in-default-browser/issues"
     },
     "engines": {
         "vscode": "^1.10.0"
@@ -18,6 +18,7 @@
         "Other"
     ],
     "keywords": [
+        "keybindings",
         "open",
         "html",
         "default",
@@ -25,32 +26,40 @@
     ],
     "icon": "icon.jpg",
     "activationEvents": [
-        "onCommand:peakchen90.openInBrowser"
+        "onCommand:D1n910.openInBrowser"
     ],
     "main": "./extension",
     "contributes": {
         "commands": [
             {
-                "command": "peakchen90.openInBrowser",
-                "title": "在浏览器中打开"
+                "command": "D1n910.openInBrowser",
+                "title": "Open in default browser"
             }
         ],
         "menus": {
             "editor/context": [
                 {
                     "when": "editorLangId == html",
-                    "command": "peakchen90.openInBrowser",
+                    "command": "D1n910.openInBrowser",
                     "group": "1_modification"
                 }
             ],
             "explorer/context": [
                 {
                     "when": "resourceLangId == html",
-                    "command": "peakchen90.openInBrowser",
+                    "command": "D1n910.openInBrowser",
                     "group": "1_modification"
                 }
             ]
-        }
+        },
+        "keybindings": [
+            {
+                "command": "D1n910.openInBrowser",
+                "when": "resourceLangId == html",
+                "key": "ctrl+1",
+                "mac": "cmd+1"
+            }
+        ]
     },
     "scripts": {
         "pub": "vsce publish patch"
