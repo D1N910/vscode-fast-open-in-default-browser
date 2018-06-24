@@ -1,4 +1,4 @@
-# Open HTML in Default Browser
+#Fast Open HTML in Default Browser
 
 ## Features
 - Open HTML file with default browser
